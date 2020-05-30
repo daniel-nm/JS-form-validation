@@ -1,0 +1,42 @@
+@use './variables'as *;
+
+// Container styles
+.container {
+  width: 80.53%;
+  margin: 0 auto;
+}
+
+// Flex styles
+.flex {
+  display: flex;
+
+  &-justify-between {
+    justify-content: space-between;
+  }
+
+  &-align-center {
+    align-items: center;
+  }
+}
+
+// Header styles
+.nav {
+  margin-top: 2.5rem;
+  margin-bottom: 6rem;
+
+  & .logo {
+    font-size: 1.25rem;
+    font-weight: $f-medium;
+
+    & img {
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+  }
+
+  & .menu {
+    font-weight: $f-medium;
+  }
+}
+
+// Main styles
