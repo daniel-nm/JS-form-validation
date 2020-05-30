@@ -4,12 +4,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My app</title>
+  <title>JavaScript form validation</title>
 </head>
 
 <body>
 
+  <header>
+    <!-- Navigation -->
+    <nav class="nav flex flex-justify-between flex-align-center">
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <img src="./assets/img/logo.svg" alt="logo">
+        Box.
+      </a>
+      <!-- Menu btn -->
+      <a href="#">Menu.</a>
+    </nav>
+    <!-- Hero section -->
+    <section class="hero">
+      <p>Contact.</p>
+      <h1>Let's do something together.</h1>
+    </section>
+  </header>
 
+  <main>
+    <!-- Form -->
+    <form class="form">
+      <!-- Details section -->
+      <div class="form__details">
+        <h2>Your details.</h2>
+        <p>A little information about you.</p>
+        <!-- Name section -->
+        <div class="fullName">
+          <!-- First Name -->
+          <div class="form__row">
+            <label for="firstName" class="form__label">First Name.</label>
+            <input type="text" name="firstName" id="firstName" placeholder="John" class="form__input">
+            <small>Required</small>
+          </div>
+          <!-- Last Name -->
+          <div class="form__row">
+            <label for="lastName" class="form__label">Last Name.</label>
+            <input type="text" name="lastName" id="lastName" placeholder="Doe" class="form__input">
+            <small>Required</small>
+          </div>
+        </div>
+        <!-- Contact details section -->
+        <div class="contact">
+          <!-- Email address -->
+          <div class="form__row">
+            <label for="email" class="form__label">Email address.</label>
+            <input type="email" name="email" id="email" placeholder="johndoe@domain.com" class="form__input">
+            <small>Required</small>
+          </div>
+          <!-- Telephone number -->
+          <div class="form__row">
+            <label for="phone" class="form__label">Email address.</label>
+            <input type="tel" name="phone" id="phone" placeholder="07987654321" class="form__input">
+            <small>Required</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Message section -->
+      <div class="message">
+        <h2>Your message.</h2>
+        <p>Some information on how we can help you.</p>
+        <textarea name="message" id="message" class="form__input form__input--big"
+          placeholder="Your message."></textarea>
+      </div>
+
+      <button type="submit" class="form__btn">Send</button>
+    </form>
+  </main>
 
   <script src="./js/index.js"></script>
 </body>
