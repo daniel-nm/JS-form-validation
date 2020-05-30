@@ -1,7 +1,11 @@
 @use '../variables'as *;
+@use '../mixins'as *;
 
 .form {
-  &__details {
+  margin-bottom: 2.5rem;
+
+  &__details,
+  &__message {
     h2 {
       margin-bottom: 0.5rem;
     }
@@ -9,7 +13,64 @@
     p {
       margin-bottom: 2.5rem;
 
-      &::after {}
+      &::after {
+        @include line-after;
+      }
+    }
+  }
+
+  &__row {
+    margin-bottom: 1.5rem;
+    position: relative;
+
+    & small {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  ;
+
+  &__label {
+    display: block;
+    font-weight: $f-bold;
+    margin-bottom: 1rem;
+  }
+
+  &__input {
+    box-sizing: border-box;
+    border: 1px solid $text;
+    color: $text;
+    font-size: 1rem;
+    height: 2.5rem;
+    padding-left: 1rem;
+    width: 100%;
+
+    &--big {
+      height: 10rem;
+      padding-top: 1rem;
+    }
+  }
+
+  &__message {
+    margin-top: 4rem;
+  }
+
+  &__btn {
+    background-color: $text;
+    color: $bg;
+    cursor: pointer;
+    height: 3rem;
+    font-size: 1rem;
+    font-weight: $f-bold;
+    margin-top: 4.5rem;
+    transition: background 300ms ease-in;
+    width: 100%;
+
+    &:hover {
+      background-color: $success;
+      text-decoration: underline;
     }
   }
 }
