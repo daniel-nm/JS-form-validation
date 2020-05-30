@@ -1,0 +1,15 @@
+@use '../variables'as *;
+
+.form {
+  &__details {
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 2.5rem;
+
+      &::after {}
+    }
+  }
+}

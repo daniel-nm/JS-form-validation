@@ -1,0 +1,10 @@
+@use './variables'as *;
+
+@mixin line-after {
+  background-color: $text;
+  content: '';
+  display: block;
+  height: 1px;
+  width: 32px;
+  margin-top: 8px;
+}

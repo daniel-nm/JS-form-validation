@@ -1,4 +1,6 @@
+@use '../mixins'as *;
 @use '../variables'as *;
+
 
 // Header styles
 .nav {
@@ -26,12 +28,7 @@
     margin-bottom: 2rem;
 
     &::after {
-      background-color: $text;
-      content: '';
-      display: block;
-      height: 1px;
-      width: 32px;
-      margin-top: 8px;
+      @include line-after;
     }
   }
 
