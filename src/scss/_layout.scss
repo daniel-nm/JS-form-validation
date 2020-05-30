@@ -39,4 +39,25 @@
   }
 }
 
+.hero {
+  & p {
+    font-weight: $f-medium;
+    margin-bottom: 2rem;
+
+    &::after {
+      background-color: $text;
+      content: '';
+      display: block;
+      height: 1px;
+      width: 32px;
+      margin-top: 8px;
+    }
+  }
+
+  & h1 {
+    font-weight: $f-bold;
+    margin-bottom: 4.5rem;
+  }
+}
+
 // Main styles
