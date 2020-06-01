@@ -5,16 +5,3 @@
   width: 80.53%;
   margin: 0 auto;
 }
-
-// Flex styles
-.flex {
-  display: flex;
-
-  &-justify-between {
-    justify-content: space-between;
-  }
-
-  &-align-center {
-    align-items: center;
-  }
-}
