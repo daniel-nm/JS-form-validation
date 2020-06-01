@@ -36,5 +36,9 @@
     font-weight: $f-bold;
     line-height: 1.25;
     margin-bottom: 4.5rem;
+
+    @media screen and (min-width: 48em) {
+      margin-bottom: 6rem;
+    }
   }
 }

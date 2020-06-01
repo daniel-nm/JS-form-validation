@@ -17,6 +17,11 @@
         @include line-after;
       }
     }
+
+    @media screen and (min-width: 48em) {
+      width: 23.3125rem;
+      margin-left: 4.875rem;
+    }
   }
 
   &__row {
