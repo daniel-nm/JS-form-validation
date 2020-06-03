@@ -1,9 +1,11 @@
 @use '../variables'as *;
 @use '../mixins'as *;
 
+// Form
 .form {
   margin-bottom: 2.5rem;
 
+  // Form sections
   &__details,
   &__message,
   &__alert {
@@ -19,11 +21,13 @@
       }
     }
 
+    // Tablet
     @media screen and (min-width: 48em) {
       width: 23.3125rem;
       margin-left: 4.875rem;
     }
 
+    // Desktop
     @media screen and (min-width: 67.9375em) {
       width: auto;
       max-width: 66.5rem;
@@ -31,6 +35,7 @@
     }
   }
 
+  // Form rows
   &__row {
     margin-bottom: 2rem;
     position: relative;
@@ -41,6 +46,7 @@
       right: 0;
     }
 
+    // Desktop
     @media screen and (min-width: 67.9375em) {
       flex-grow: 1;
 
@@ -50,12 +56,14 @@
     }
   }
 
+  // Form labels
   &__label {
     display: block;
     font-weight: $f-bold;
     margin-bottom: 1rem;
   }
 
+  // Form input
   &__input {
     box-sizing: border-box;
     border: 1px solid $text;
@@ -65,11 +73,13 @@
     padding-left: 1rem;
     width: 100%;
 
+    // Variant of input
     &--big {
       height: 10rem;
       padding-top: 1rem;
     }
 
+    // Pseudo-classes
     &:valid {
       outline-color: $success;
       border: 2px solid $success;
@@ -81,15 +91,18 @@
     }
   }
 
+  // Help information
   &__format {
     font-size: 0.85rem;
     margin-top: 0.5rem;
   }
 
+  // Message textarea
   &__message {
     margin-top: 4rem;
     position: relative;
 
+    // Desktop
     @media screen and (min-width: 67.9375em) {
       & .form__row {
         margin-left: 0;
@@ -97,6 +110,7 @@
     }
   }
 
+  // Form button
   &__btn {
     background-color: $text;
     color: $bg;
@@ -108,17 +122,20 @@
     transition: background 300ms ease-in;
     width: 100%;
 
-    &:hover {
+    &:hover,
+    &:active {
       background-color: $success;
       text-decoration: underline;
     }
 
+    // Desktop
     @media screen and (min-width: 67.9375em) {
       width: 33.375rem;
       margin-left: 8.625rem;
     }
   }
 
+  // Flex styles for fullName and contact sections
   & .fullName,
   & .contact {
     @media screen and (min-width: 67.9375em) {
@@ -126,10 +143,12 @@
     }
   }
 
+  // Modify alignment for contact section
   & .contact {
     align-items: initial;
   }
 
+  // Form alert styles
   &__alert {
     background-color: $error;
     color: $bg;

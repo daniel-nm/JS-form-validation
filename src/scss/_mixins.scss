@@ -1,5 +1,6 @@
 @use './variables'as *;
 
+// Adds decorative line after element
 @mixin line-after {
   background-color: $text;
   content: '';
@@ -9,6 +10,7 @@
   margin-top: 8px;
 }
 
+// Flex settings
 @mixin flex-between-center {
   display: flex;
   justify-content: space-between;

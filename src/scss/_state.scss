@@ -1,14 +1,18 @@
 @use './variables'as *;
 
 .is {
+
+  // Hides element from DOM
   &-hidden {
     display: none;
   }
 
+  // Sets default border for form fields
   &-empty {
     border: 1px solid $text !important;
   }
 
+  // Error message styles
   &-error::after {
     content: attr(data-after);
     position: absolute;

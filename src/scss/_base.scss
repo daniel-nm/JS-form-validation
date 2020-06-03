@@ -1,5 +1,6 @@
 @use './variables'as *;
 
+// Root styles
 :root {
   font-size: 100%;
   line-height: 1.5;
@@ -9,6 +10,7 @@
   }
 }
 
+// Body styles
 body {
   background-color: $bg;
   font-family: $f-family;
@@ -16,11 +18,13 @@ body {
   padding: 0;
 }
 
+// Links styles
 a {
   text-decoration: none;
   color: $text;
 }
 
+// Headers styles
 h1 {
   font-size: 2rem;
 }
@@ -35,6 +39,7 @@ p {
   margin: 0;
 }
 
+// Lists styles
 ul,
 ol {
   li {
@@ -48,6 +53,7 @@ ul {
   }
 }
 
+// Buttons styles
 btn {
   cursor: pointer;
 }
