@@ -1,7 +1,5 @@
 @use './variables'as *;
 
-;
-
 :root {
   font-size: 100%;
   line-height: 1.5;
@@ -35,4 +33,21 @@ h1,
 h2,
 p {
   margin: 0;
+}
+
+ul,
+ol {
+  li {
+    margin-bottom: 1rem;
+  }
+}
+
+ul {
+  li {
+    list-style-type: none;
+  }
+}
+
+btn {
+  cursor: pointer;
 }

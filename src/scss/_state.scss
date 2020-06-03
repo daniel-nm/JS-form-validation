@@ -1,0 +1,22 @@
+@use './variables'as *;
+
+.is {
+  &-hidden {
+    display: none;
+  }
+
+  &-empty {
+    border: 1px solid $text !important;
+  }
+
+  &-error::after {
+    content: attr(data-after);
+    position: absolute;
+    background-color: $error;
+    color: $bg;
+    padding: 0.25rem;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+}

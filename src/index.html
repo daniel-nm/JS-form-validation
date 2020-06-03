@@ -13,10 +13,10 @@
     <nav class="nav container">
       <!-- Logo -->
       <a href="index.html" class="logo">
-        <img src="./assets/img/logo.svg" alt="logo">Box.
+        <img src="./assets/img/logo.svg" alt="Graphic of Box. logo">Box.
       </a>
       <!-- Menu btn -->
-      <a href="#" class="menu">Menu.</a>
+      <btn href="#" class="menu">Menu.</btn>
     </nav>
     <!-- Hero section -->
     <section class="hero container">
@@ -26,25 +26,31 @@
   </header>
 
   <main>
-    <!-- Form -->
-    <form class="form container container--narrow">
+    <!-- Form: novalidate turns off browser's automatic validation 
+    but allow us to use constrain validation API and CSS pseudo-classes -->
+    <form class="form container container--narrow" action="https://formsubmit.co/6c363979ecdd04dda18989e018286ea2"
+      method="POST" novalidate>
       <!-- Details section -->
       <div class="form__details">
         <h2>Your details.</h2>
-        <p>A little information about you.</p>
+        <p class="instructions">A little information about you.</p>
         <!-- Name section -->
         <div class="fullName">
           <!-- First Name -->
           <div class="form__row">
             <label for="firstName" class="form__label">First Name.</label>
-            <input type="text" name="firstName" id="firstName" placeholder="John" class="form__input">
+            <input data-label="First Name" type="text" name="firstName" id="firstName" placeholder="John"
+              class="form__input" required pattern="^[a-zA-Z]+$">
             <small>Required</small>
+            <p class="error" aria-live="polite"></p>
           </div>
           <!-- Last Name -->
           <div class="form__row">
             <label for="lastName" class="form__label">Last Name.</label>
-            <input type="text" name="lastName" id="lastName" placeholder="Doe" class="form__input">
+            <input data-label="Last Name" type="text" name="lastName" id="lastName" placeholder="Doe"
+              class="form__input" required pattern="^[a-zA-Z]+$">
             <small>Required</small>
+            <p class="error" aria-live="polite"></p>
           </div>
         </div>
         <!-- Contact details section -->
@@ -52,26 +58,47 @@
           <!-- Email address -->
           <div class="form__row">
             <label for="email" class="form__label">Email address.</label>
-            <input type="email" name="email" id="email" placeholder="johndoe@domain.com" class="form__input">
+            <input data-label="Email address" type="email" name="email" id="email" placeholder="johndoe@domain.com"
+              class="form__input" required>
             <small>Required</small>
+            <p class="error" aria-live="polite"></p>
           </div>
           <!-- Telephone number -->
           <div class="form__row">
-            <label for="phone" class="form__label">Email address.</label>
-            <input type="tel" name="phone" id="phone" placeholder="07987654321" class="form__input">
+            <label for="phone" class="form__label">Phone number.</label>
+            <input data-label="Phone number" type="tel" name="phone" id="phone" placeholder="+447987654321"
+              class="form__input" required pattern="^\+(?:[0-9] ?){6,14}[0-9]$">
             <small>Required</small>
+            <p class="form__format">Format: +447987654321 </p>
+            <p class="error" aria-live="polite"></p>
           </div>
         </div>
       </div>
 
       <!-- Message section -->
       <div class="form__message">
-        <h2>Your message.</h2>
-        <p>Some information on how we can help you.</p>
-        <textarea name="message" id="message" class="form__input form__input--big"
-          placeholder="Your message."></textarea>
+        <h2>Your request.</h2>
+        <p class="instructions">Some information on how we can help you.</p>
+        <div class="form__row">
+          <label for="message" class="form__label">Your message.</label>
+          <textarea data-label="Message" name="message" id="message" class="form__input form__input--big"
+            placeholder="Your message." required></textarea>
+          <small>Required</small>
+          <p class="error" aria-live="polite"></p>
+        </div>
       </div>
 
+      <!-- Hidden inputs -->
+      <input type="hidden" name="_replyto">
+      <input type="hidden" name="_subject" value="Personal form test project">
+      <input type="text" name="_honey" class="is-hidden">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="http://localhost:3000/thanks.html">
+
+      <!-- Alert msg -->
+      <ul class="form__alert is-hidden"></ul>
+
+      <!-- Submit button -->
       <button type="submit" class="form__btn">Send</button>
     </form>
   </main>
